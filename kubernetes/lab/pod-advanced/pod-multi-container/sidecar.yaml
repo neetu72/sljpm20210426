@@ -7,14 +7,14 @@ spec:
   - name: shared-logs 
     emptyDir: {}
   containers:
-  - name: main-container
+  - name: sidecar-container
     image: alpine 
     command: ["/bin/sh"]
     args: ["-c", "while true; do date >> /var/log/index.html; sleep 10;done"]
     volumeMounts:
     - name: shared-logs
       mountPath: /var/log
-  - name: sidecar-container
+  - name: main-container
     image: nginx
     ports:
       - containerPort: 80

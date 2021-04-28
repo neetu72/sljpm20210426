@@ -1,7 +1,7 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: topology-zone-constraint-11
+  name: topology-zone-constraint-1
   labels:
     foo: bar
 spec:

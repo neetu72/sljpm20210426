@@ -12,5 +12,4 @@ spec:
     - echo App is running! && sleep 30
     image: busybox
     name: pod-busybox
-    resources: {}
   restartPolicy: Never

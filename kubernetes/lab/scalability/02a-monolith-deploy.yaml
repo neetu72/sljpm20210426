@@ -22,3 +22,4 @@ spec:
         name: weather
         ports:
         - containerPort: 8080
+        

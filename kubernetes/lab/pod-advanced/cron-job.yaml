@@ -4,6 +4,8 @@ metadata:
   name: cron-job
 spec:
   schedule: "*/10 * * * *"
+  startingDeadlineSeconds: 60
+  concurrencyPolicy: "Allow"
   jobTemplate:
     spec:
       template:
@@ -18,4 +20,3 @@ spec:
             - -c
             - date; echo Migrating data to reporting server...;sleep 60;
           restartPolicy: OnFailure
-
